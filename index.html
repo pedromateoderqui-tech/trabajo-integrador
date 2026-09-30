@@ -24,9 +24,11 @@
             <p>
                 Super Mario Bros es una franquicia de videojuegos creada por nintendo, con Shigeru Miyamoto como una de las figuras clave en el diseño original. El primer juego de la saga se lanzó em 1985 para el NES y marcó un antes y un despues en los videojuegos de plataformas.
             </p>
-            <p>
+            <p id="mas_historia" class="oculto">
                 A lo largo de los años, la franquicia se expandió con decenas de títulos, spin-offs de carreras, deportes y party games, además de películas y merchandising, consolidándose como una de las marcas más reconocidas de la industria.
             </p>
+            <button id="btn-ver-mas" type="button">Ver más</button>
+        
         </section>
         <section id="personajes">
             <h2>Personajes principales</h2>
@@ -39,11 +41,13 @@
                 <li>Yoshi - El fiel compañero dinosaurio</li>
             </ul>
             <h3>Galería</h3>
+            <div class="galeria">
             <img src="imagenes/mario.webp" alt="Ilustración de Mario">
             <img src="imagenes/luigi.webp" alt="Ilustración de Luigi">
             <img src="imagenes/peach.webp" alt="Ilustración de La Princesa Peach">
             <img src="imagenes/bowser.webp" alt="Ilustración de Bowser">
             <img src="imagenes/yoshi.webp" alt="Ilustración de Yoshi">
+              </div>
         </section>
         <section id="juegos">
             <h2>Juegos destacados</h2>
@@ -54,6 +58,12 @@
                 <li>Super Mario 64. (1996)</li>
                 <li>Super Mario Odyssey. (2017)</li>
             </ul>
+            <h3>Contador de monedas</h3>
+            <div class="monedas">
+            <p>Monedas: <strong id="contador-monedas">0</strong></p>
+            <button id="btn-moneda" type="button">🪙 Juntar moneda</button>
+            <button id="btn-reiniciar" type="button">Reiniciar</button>
+            </div>
             <p>
                 Para más información y noticias oficiales, podés visitar el 
                 <a href="https://es.wikipedia.org/wiki/Super_Mario" target="_blank">página de Wikipedia sobre Super Mario</a>
@@ -61,14 +71,34 @@
                 <a href="https://es.wikipedia.org/wiki/Super_Mario_Bros" target="_blank">página específica de Super Mario Bros. (1985)</a>
             </p>
         </section>
-        <section id="Contacto">
+        <section id="contacto">
             <h2>Contacto</h2>
             <p>¿Tenés dudas o comentarios sobre este sitio? Escribinos:</p>
             <p>Email: nintendo@gmail.com</p>
+            <form id="form-contacto" novalidate>
+              <div class="campo">
+               <label for="nombre">Nombre</label>
+               <input type="text" id="nombre" name="nombre">
+               <span class="error" id="error-nombre"></span>
+             </div>
+             <div class="campo">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email">
+              <span class="error" id="error-email"></span>
+            </div>
+            <div class="campo">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+              <span class="error" id="error-mensaje"></span>
+            </div>
+            <button type="submit">Enviar</button>
+           <p id="mensaje-exito" class="mensaje-exito"></p>
+           </form>
         </section>
     </main>
     <footer>
         <p>&copy; 2026 - Sitio creado como trabajo integrador universitario.</p>
     </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>
